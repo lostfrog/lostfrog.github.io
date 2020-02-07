@@ -8,18 +8,19 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>hexo+github搭建博客教程【windows环境】 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="准备环境准备 node 和 git 环境登陆nodejs.org，下载最新版nodejs版本，点击正常安装即可。安装完毕后，打开cmd.exe（建议使用管理员身份打开，后续打开操作都一样），执行 12$ node -v$ npm -v 若能正常显示版本，则说明nodejs已安装成功。  hexo 安装">
+  <meta name="description" content="准备环境准备 node 和 git 环境登陆nodejs.org，下载最新版nodejs版本，点击正常安装即可。安装完毕后，打开cmd.exe（建议使用管理员身份打开，后续打开操作都一样），执行 12$ node -v$ npm -v 若能正常显示版本，则说明nodejs已安装成功。【npm为nodejs组件】在安装hexo之前，在cmd界面使用npm安装淘宝cnpm管理组件： 1$ npm in">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo+github搭建博客教程【windows环境】">
 <meta property="og:url" content="http://yoursite.com/2020/02/04/hexo-github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="准备环境准备 node 和 git 环境登陆nodejs.org，下载最新版nodejs版本，点击正常安装即可。安装完毕后，打开cmd.exe（建议使用管理员身份打开，后续打开操作都一样），执行 12$ node -v$ npm -v 若能正常显示版本，则说明nodejs已安装成功。  hexo 安装">
+<meta property="og:description" content="准备环境准备 node 和 git 环境登陆nodejs.org，下载最新版nodejs版本，点击正常安装即可。安装完毕后，打开cmd.exe（建议使用管理员身份打开，后续打开操作都一样），执行 12$ node -v$ npm -v 若能正常显示版本，则说明nodejs已安装成功。【npm为nodejs组件】在安装hexo之前，在cmd界面使用npm安装淘宝cnpm管理组件： 1$ npm in">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://47.100.230.47:8080/nodejs.png">
 <meta property="og:image" content="http://47.100.230.47:8080/nodejs_ok.png">
-<meta property="og:image" content="http://47.100.230.47:8080/1.png">
+<meta property="og:image" content="http://47.100.230.47:8080/cnpm_ok.png">
+<meta property="og:image" content="http://47.100.230.47:8080/hexo_ok.png">
 <meta property="article:published_time" content="2020-02-04T15:47:13.000Z">
-<meta property="article:modified_time" content="2020-02-05T11:54:04.286Z">
+<meta property="article:modified_time" content="2020-02-07T15:56:37.625Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://47.100.230.47:8080/nodejs.png">
@@ -178,11 +179,25 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="准备环境"><a href="#准备环境" class="headerlink" title="准备环境"></a><u>准备环境</u></h2><p>准备 node 和 git 环境<br>登陆nodejs.org，下载最新版nodejs版本，点击正常安装即可。<br><img src="http://47.100.230.47:8080/nodejs.png" width="30%"><br>安装完毕后，打开cmd.exe（建议使用管理员身份打开，后续打开操作都一样），执行</p>
+        <h2 id="准备环境"><a href="#准备环境" class="headerlink" title="准备环境"></a><u>准备环境</u></h2><p>准备 node 和 git 环境<br>登陆nodejs.org，下载最新版nodejs版本，点击正常安装即可。<br><img src="http://47.100.230.47:8080/nodejs.png" width="50%"><br>安装完毕后，打开cmd.exe（建议使用管理员身份打开，后续打开操作都一样），执行</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ node -v</span><br><span class="line">$ npm -v</span><br></pre></td></tr></table></figure>
-<p>若能正常显示版本，则说明nodejs已安装成功。<br><img src="http://47.100.230.47:8080/nodejs_ok.png" width="18%"></p>
-<hr>
-<h2 id="hexo-安装"><a href="#hexo-安装" class="headerlink" title="hexo 安装"></a><u>hexo 安装</u></h2><img src="http://47.100.230.47:8080/1.png" width="50%">
+<p>若能正常显示版本，则说明nodejs已安装成功。【npm为nodejs组件】<br><img src="http://47.100.230.47:8080/nodejs_ok.png" width="25%"><br>在安装hexo之前，在cmd界面使用npm安装淘宝cnpm管理组件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+<p>安装完成后，执行cnpm -v若能显示版本，则表示cnpm安装成功。<br><img src="http://47.100.230.47:8080/cnpm_ok.png" width="70%"></p>
+<h2 id="hexo-安装"><a href="#hexo-安装" class="headerlink" title="hexo 安装"></a><u>hexo 安装</u></h2><p>执行命令安装hexo:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cnpm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<p>耐心等待，安装失败就多安装几次。安装完成后，执行hexo -v若能显示版本，则表示hexo安装成功。<br><img src="http://47.100.230.47:8080/hexo_ok.png" width="30%"><br>安装完成后，在本地创建一个文件夹，作为本地hexo的生成路径，在cmd界面下切换至该路径<br>执行命令克隆初始化一个本地博客:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br></pre></td></tr></table></figure>
+<p>直到出现 start blogging with Hexo！字样，则表示克隆成功。<br>在本地创建的路径下可看到以下目录</p>
+<pre><code class="bash">.
+├── _config.yml <span class="comment"># 网站的配置信息，您可以在此配置大部分的参数。 </span>
+├── package.json
+├── scaffolds <span class="comment"># 模版文件夹</span>
+├── <span class="built_in">source</span>  <span class="comment"># 资源文件夹，除 _posts 文件，其他以下划线_开头的文件或者文件夹不会被编译打包到public文件夹</span>
+|   ├── _drafts <span class="comment"># 草稿文件</span>
+|   └── _posts <span class="comment"># 文章Markdowm文件 </span>
+└── themes  <span class="comment"># 主题文件夹</span></code></pre>
+
       
 
       
